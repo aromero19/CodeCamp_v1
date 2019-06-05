@@ -15,10 +15,16 @@ class ReviewanswersController < ApplicationController
   # GET /reviewanswers/new
   def new
     @reviewanswer = Reviewanswer.new
+    @reviews = Review.all
+    @questions = Question.all
+    @answers = Answer.all
   end
 
   # GET /reviewanswers/1/edit
   def edit
+    @reviews = Review.all
+    @questions = Question.all
+    @answers = Answer.all
   end
 
   # POST /reviewanswers

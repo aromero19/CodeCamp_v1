@@ -13,17 +13,20 @@
 
   <div class="field">
     <%= form.label :review_id %>
-    <%= form.number_field :review_id %>
+    <!-- <%= form.number_field :review_id %> -->
+    <%= collection_select(:reviewanswer, :review_id, @reviews, :id, :shortname, prompt:true) %>
   </div>
 
   <div class="field">
     <%= form.label :question_id %>
-    <%= form.number_field :question_id %>
+    <!-- <%= form.number_field :question_id %> -->
+    <%= collection_select(:reviewanswer, :question_id, @questions, :id, :description, prompt:true) %>
   </div>
 
   <div class="field">
     <%= form.label :answer_id %>
-    <%= form.number_field :answer_id %>
+    <!-- <%= form.number_field :answer_id %> -->
+    <%= collection_select(:reviewanswer, :answer_id, @answers, :id, :description, prompt:true) %>
   </div>
 
   <div class="actions">

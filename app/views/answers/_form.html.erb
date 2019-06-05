@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= form.label :question_id %>
-    <%= form.number_field :question_id %>
+    <!-- <%= form.number_field :question_id %> -->
+    <%= collection_select(:answer, :question_id, @questions, :id, :description, prompt:true) %>
   </div>
 
   <div class="actions">

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'quiz/index'
   resources :assessments
   resources :reviewanswers
   resources :reviews
